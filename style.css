@@ -1,0 +1,66 @@
+/* Intel Sustainability localization — matches the prior project's blue-gradient visual language. */
+
+:root {
+  --intel-blue: #0068b5;
+  --intel-navy: #003c71;
+  --ink: #172b4d;
+  --soft-blue: #eaf4fc;
+  --line: #b8d4ee;
+  --focus: #f5b700;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Segoe UI", Tahoma, Verdana, sans-serif; color: var(--ink); background: linear-gradient(to bottom, #c9dff5 0%, #f5faff 24%, #eef5fc 100%); line-height: 1.65; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.skip-link { position: fixed; z-index: 1100; inset-block-start: 1rem; inset-inline-start: 1rem; padding: .7rem 1rem; color: #111; background: #fff; border-radius: .35rem; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+.hero-section { color: #fff; background: linear-gradient(to bottom, #8ecdf5 0%, #237ec7 47%, #005a9c 100%); }
+.navbar-brand img { filter: drop-shadow(0 2px 3px rgba(0, 30, 60, .35)); }
+.nav-link { color: #fff !important; font-weight: 600; }
+.nav-link:hover, .nav-link:focus { text-decoration: underline; }
+.hero-content { max-width: 760px; padding-block: 3.5rem 5rem; }
+.hero-content h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); font-weight: 800; text-shadow: 0 2px 4px rgba(0, 30, 60, .4); }
+.hero-content .lead { max-width: 650px; font-size: 1.18rem; }
+.eyebrow { margin-bottom: .35rem; font-size: .82rem; font-weight: 800; letter-spacing: .08em; }
+.section-space { padding-block: clamp(3.5rem, 7vw, 6rem); }
+.section-heading { max-width: 670px; margin-bottom: 2rem; }
+.section-heading h2, #faq-heading, #subscribe-heading { font-weight: 800; }
+
+.milestone-card { overflow: hidden; border: 1px solid var(--line); border-radius: .75rem; box-shadow: 0 .35rem 1rem rgba(0, 60, 113, .1); transition: transform .2s ease, box-shadow .2s ease; }
+.milestone-card:hover { transform: translateY(-5px); box-shadow: 0 .7rem 1.5rem rgba(0, 60, 113, .18); }
+.milestone-card img { width: 100%; height: 175px; object-fit: cover; }
+.milestone-card .card-body { background: linear-gradient(to bottom, #fff, #eaf3fc); }
+.year { margin-bottom: .2rem; color: var(--intel-blue); font-weight: 800; }
+
+.priorities-section { background: rgba(255, 255, 255, .74); border-block: 1px solid var(--line); }
+.priority-card { padding: 2rem; background: #fff; border: 1px solid var(--line); border-radius: .75rem; box-shadow: 0 .3rem .9rem rgba(0, 60, 113, .09); }
+.priority-card h3 { margin-top: 1.15rem; font-size: 1.35rem; font-weight: 800; }
+.icon-circle { display: grid; width: 3.25rem; height: 3.25rem; place-items: center; color: #fff; font-size: 1.5rem; background: var(--intel-blue); border-radius: 50%; }
+.learn-more { display: inline-flex; gap: .35rem; align-items: center; margin-top: .6rem; padding: .55rem 1rem; color: #fff; font-weight: 700; text-decoration: none; background: var(--intel-blue); border-radius: 999px; }
+.learn-more:hover, .learn-more:focus { color: #fff; background: var(--intel-navy); }
+.accordion-button { font-weight: 700; color: var(--ink); }
+.accordion-button:not(.collapsed) { color: var(--intel-navy); background: var(--soft-blue); }
+.accordion-button:focus { box-shadow: 0 0 0 .25rem rgba(245, 183, 0, .55); }
+
+.subscribe-section { color: #fff; background: var(--intel-navy); }
+.subscribe-panel { padding: clamp(1.5rem, 5vw, 3rem); background: linear-gradient(135deg, #005a9c, #003c71); border: 1px solid rgba(255, 255, 255, .35); border-radius: 1rem; box-shadow: 0 .7rem 1.5rem rgba(0, 40, 75, .25); }
+.subscribe-panel .form-control { border: 2px solid transparent; }
+.subscribe-panel .form-control:focus { border-color: var(--focus); box-shadow: 0 0 0 .2rem rgba(245, 183, 0, .35); }
+.subscribe-panel .form-check-input { border-color: #fff; }
+.subscribe-panel .form-check-input:checked { background-color: var(--focus); border-color: var(--focus); }
+.subscribe-panel .btn-warning { color: #172b4d; font-weight: 800; background: var(--focus); border-color: var(--focus); }
+.subscribe-panel .btn-warning:hover { color: #fff; background: #b97f00; border-color: #b97f00; }
+.subscribe-panel .invalid-feedback { color: #fff; font-weight: 600; }
+.site-footer { color: #fff; background: #002b50; }
+.site-footer a { color: #fff; font-weight: 600; }
+.site-footer a:hover, .site-footer a:focus { color: #ffd966; }
+
+@media (max-width: 767.98px) {
+  .hero-content { padding-block: 2rem 3.5rem; }
+  .navbar-nav { padding-block: .8rem; }
+  .section-space { padding-block: 3rem; }
+}
+
+/* Logical properties above let Bootstrap and custom elements reverse cleanly when language changes. */
